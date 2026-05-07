@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Card Profile</title>
     <style>
+        @font-face {
+            font-family: 'Inter';
+            src: url('inter/Inter.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -13,50 +20,116 @@
 
         body {
             background-color: #E5E6E8;
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
         }
 
         .card {
-            display: block;
-            width: 300px;
-            height: 400px;
+            width: 380px;
+            height: 480px;
             background-color: #fff;
-            margin: 20px auto;
+            border-radius: 20px;
             overflow: hidden;
-            border-radius: 15px; /* Le agregué un poco de borde a la tarjeta */
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
         }
 
-        /* CORRECCIÓN: Doble guion bajo para que coincida con el HTML */
-        .card__company {
+        .card__header-dark {
             height: 100px;
-            background-color: rgb(107, 201, 198);
+            background-color: #38383a;
         }
 
-        .card__flag {
-            display: block;
-            width: 100%;
-            height: 50px;
-            background-color: rgb(56, 56, 58);
+        .card__header-color {
+            height: 60px;
+            background-color: #7acbc7;
         }
 
         .card__image {
             display: block;
-            width: 100px;
-            height: 100px;
+            width: 140px;
+            height: 140px;
             border-radius: 50%;
             object-fit: cover;
-            border: white solid 5px;
-            margin-top: -75px; /* Ajustado para que quede a la mitad de la franja oscura */
-            margin-left: auto;
-            margin-right: auto;
-            position: relative; /* Para asegurar que se vea por encima */
+            border: white solid 6px;
+            margin: -120px auto 10px auto; 
+            position: relative;
+            z-index: 10;
+        }
+
+        .card__nombre {
+            text-align: center;
+            font-size: 28px;
+            color: #1a1a1a;
+            letter-spacing: 2px;
+            margin-bottom: 2px;
+            font-weight: 400;
+        }
+
+        .card__apellido {
+            font-weight: 800;
+        }
+
+        .card__profesion {
+            text-align: center;
+            color: #7acbc7;
+            font-size: 13px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .card__info {
+            width: 80%;
+            margin: 0 auto;
+            font-size: 14px;
+        }
+
+        .card__info-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+        }
+
+        .card__label {
+            color: #7acbc7;
+            font-weight: 600;
+        }
+
+        .card__value {
+            color: #333;
+            font-weight: 500;
         }
     </style>
 </head>
 <body>
     <div class="card">
-        <div class="card__company"></div>
-        <div class="card__flag"></div>
+        <div class="card__header-dark"></div>
+        <div class="card__header-color"></div>
         <img class="card__image" src="retrato.jpg" alt="Perfil">
+        <p class="card__nombre">
+            Julián <span class="card__apellido">Nieto</span>
+        </p>
+        <p class="card__profesion">
+            Web Design & Developer
+        </p>
+        <div class="card__info">
+            <div class="card__info-row">
+                <span class="card__label">Documento</span>
+                <span class="card__value">1011101506</span>
+            </div>
+            <div class="card__info-row">
+                <span class="card__label">Correo</span>
+                <span class="card__value">juliannieto170@gmail.com</span>
+            </div>
+            <div class="card__info-row">
+                <span class="card__label">Celular</span>
+                <span class="card__value">3115696457</span>
+            </div>
+        </div>
     </div>
+
 </body>
 </html>
