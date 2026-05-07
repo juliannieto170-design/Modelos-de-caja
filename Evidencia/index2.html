@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Profile</title>
+    <style>
+        @font-face {
+            font-family: 'Inter';
+            src: url('inter/Inter.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: #004080;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .card {
+            width: 380px;
+            background-color: #f78b1e;
+            border-radius: 45px;
+            padding: 20px 20px 0 20px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card__image-container {
+            width: 100%;
+            height: 320px;
+            background-color: #fff;
+            border-radius: 30px;
+            overflow: hidden;
+            position: relative;
+            z-index: 1;
+        }
+
+        .card__image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card__ui-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+
+        .card__battery {
+            align-self: flex-end;
+            color: #333;
+            font-size: 10px;
+            font-weight: 800;
+        }
+
+        .card__content {
+            background-color: #2a2a2a;
+            margin: -40px -20px 0 -20px;
+            border-radius: 40px 40px 0 0;
+            padding: 55px 30px 40px 30px;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .card__nombre {
+            color: #d4b495;
+            font-size: 26px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .card__descripcion {
+            color: #ccc;
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .card__button {
+            background-color: #f78b1e;
+            color: #fff;
+            border: none;
+            padding: 16px 0;
+            border-radius: 15px;
+            font-size: 20px;
+            font-weight: 700;
+            width: 100%;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <div class="card__image-container">
+            <img class="card__image" src="retrato.jpg" alt="Profile">
+            <div class="card__ui-overlay">
+                <div class="card__battery">SCAN</div>
+            </div>
+        </div>
+
+        <div class="card__content">
+            <h1 class="card__nombre">Julián Nieto</h1>
+            <p class="card__descripcion">
+                Software engineer & Thermography Lead. With a knack for elegant code 
+                and advanced thermal scanning, I lead a team to craft innovative solutions.
+                2026-05-07-Inspections
+            </p>
+            <button class="card__button">Follow</button>
+        </div>
+    </div>
+
+</body>
+</html>
